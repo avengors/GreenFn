@@ -1,0 +1,741 @@
+/* header @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+html {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1 {
+	margin: 0;
+	padding: 0;
+}
+
+.homeBody {
+	background-color: rgb(93, 100, 69);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	user-select: none;
+}
+
+header {
+	padding-top: 20px;
+	width: 1180px;
+	height: 100px;
+	text-align: center;
+	line-height: 100px;
+	display: flex;
+	justify-content: space-between;
+	color: rgb(247, 238, 223);
+}
+
+.cate {
+	padding-left: 20px;
+	text-align: left;
+	font-size: 28px;
+	font-weight: normal;
+}
+
+.closeBtn {
+	font-size: 28px;
+	font-weight: normal;
+	margin-top: 30px;
+	margin-right: 40px;
+	color: rgb(93, 100, 69);
+	transition-duration: 0.5s;
+	text-align: right;
+}
+
+.login, .logout {
+	color: rgb(247, 238, 223);
+	padding: 10px;
+	width: 150px;
+	font-size: 1.15rem;
+}
+
+.joinBtn, .myPage {
+	color: rgb(93, 100, 69);
+	border: 1px solid rgb(247, 238, 223);
+	background-color: rgb(247, 238, 223);
+	border-radius: 30px;
+	border-width: thick;
+	padding: 10px;
+	font-size: 1.15rem;
+	transition-duration: 0.5s;
+}
+
+/* home @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.joinBtn:hover, .myPage:hover {
+	background-color: transparent;
+	border-width: thick;
+	color: rgb(247, 238, 223);
+	transition-duration: 0.5s;
+}
+
+aside {
+	width: 350px;
+	height: 101.9%;
+	top: 0;
+	left: -350px;
+	z-index: 5;
+	background-color: rgb(220, 208, 182);
+	color: rgb(93, 100, 69);
+	position: absolute;
+	transition-duration: 0.5s;
+}
+
+.mainAside {
+	width: 350px;
+}
+
+.asideList {
+	width: 350px;
+	text-align: center;
+	margin-top: 15%;
+}
+
+.asideList>p {
+	margin: 50px;
+	font-size: 15pt;
+}
+
+main {
+	width: 1180px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.part3 {
+	width: 34%;
+	height: 700px;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	line-height: 700px;
+	font-size: 40px;
+	background-size: auto 700px;
+	background-position: center;
+	font-weight: bold;
+	color: transparent;
+	cursor: pointer;
+	display: inline-block;
+	transition-duration: 0.5s;
+}
+
+.sea {
+	background-image:
+		url('https://images.pexels.com/photos/4198029/pexels-photo-4198029.jpeg');
+}
+
+.air {
+	background-image:
+		url('https://i.pinimg.com/originals/0d/36/ca/0d36ca5098bba8b9b24f50e72a336b02.jpg');
+}
+
+.land {
+	background-image:
+		url('https://photo.coolenjoy.net/data/editor/2012/3b1073c47486832be39b309351f940f5f3b179ea.png');
+}
+
+.part3:hover {
+	width: 50%;
+	background-size: auto 900px;
+	font-size: 60px;
+	transition-duration: 1s;
+	color: rgb(247, 238, 223);
+	text-shadow: 4px 4px 6px rgb(50, 50, 50);
+}
+
+/* loginForm @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.loginForm {
+	padding: 50px;
+	width: 300px;
+	height: 410px;
+	margin: auto;
+	margin-bottom: 100px;
+	align-items: center;
+	position: fixed;
+	text-align: center;
+	background-color: rgb(247, 238, 223);
+	z-index: 5;
+	color: rgb(93, 100, 69);
+}
+.login_id input {
+	width: 238px;
+	height: 50px;
+	padding: 0 30px;
+	border: 2px solid rgb(151, 156, 124);
+	outline: none;
+	margin-bottom: 20px;
+}
+.login_id input:hover, .login_id input:focus {
+	border: 2px solid rgb(93, 100, 69);
+}
+.submitBtn {
+	margin-top: 20px;
+}
+.submitBtn input {
+	background-color: rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	border: 3px solid rgb(93, 100, 69);
+}
+
+.submitBtn input:hover {
+	border: 3px solid rgb(93, 100, 69);
+	background-color: rgb(247, 238, 223);
+	color: rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+.submitBtn input, .anotherLogin>div {
+	width: 100%;
+	height: 50px;
+	border: 0;
+	outline: none;
+	border-radius: 7px;
+	color: rgb(247, 238, 223);
+	font-size: 1.2em;
+	letter-spacing: 2px;
+}
+
+.anotherLogin {
+	margin-top: 40px;
+	border-top: 1px solid rgb(93, 100, 69);
+	padding-top: 20px;
+}
+
+.anotherLogin>div {
+	margin: 20px 0;
+	line-height: 50px;
+}
+
+.instaBtn {
+	background-color: rgb(93, 100, 69);
+}
+
+
+/* join @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.joinBody {
+	background-color: rgba(247, 238, 223, 0.844);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.joinForm {
+	margin-top: 10%;
+	width: 1024px;
+	background-color: white;
+	color: rgb(93, 100, 69);
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 80px;
+}
+
+.join {
+	width: 250px;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+}
+
+.join input {
+	padding: 10px;
+	padding-right: 17px;
+	border: 2px solid rgb(151, 156, 124);
+	outline: none;
+	margin: 5px 0;
+}
+
+.join input:hover, .join input:focus,
+.authForm > input:focus {
+	border: 2px solid rgb(93, 100, 69);
+}
+
+.checkId>p, .checkPw>p {
+	width: 100%;
+	display: flex;
+	margin-bottom: 0;
+}
+
+.checkId, .checkPw {
+	width: 100%;
+	margin: 10px 0;
+}
+
+.checkPw>input {
+	width: 219px;
+	height: 16px;
+	margin: 5px 0;
+}
+
+p>input {
+	padding-right: 16px;
+}
+
+.joinBody button,
+#joinFormBtn {
+	width: 50px;
+	height: 40px;
+	background-color: rgb(93, 100, 69);
+	border: 3px solid rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	color: rgb(247, 238, 223);
+	margin-top: 5px;
+}
+
+#joinFormBtn {
+	width: 100%;
+	margin-top: 20px;
+}
+
+.joinBody button:hover,
+#joinFormBtn:hover,
+.authForm > button:hover {
+	border: 3px solid rgb(93, 100, 69);
+	background-color: rgb(247, 238, 223);
+	color: rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+#idMsg, #pwMsg {
+	height: 20px;
+	line-height: 20px;
+	font-size: 9pt;
+}
+
+.authForm {
+	position: fixed;
+	top: 100px;
+	width: 250px;
+	
+    padding: 30px;
+	background-color: white;
+	text-align: center;
+
+}
+.authForm > input{
+    padding: 15px;
+    width: 185px;
+}
+.authForm > button {
+	width: 218px;
+    margin: 2px;
+	padding: 12px;
+    border: 3px solid transparent;
+    height: auto;
+}
+
+
+/* footer */
+footer {
+	width: 1180px;
+	text-align: center;
+	color: rgb(0, 0, 0, 0.5);
+}
+
+.footerMenu {
+	width: 100%;
+	height: 100px;
+	display: flex;
+}
+
+.address {
+	width: 50%;
+	color: black;
+	height: 90px;
+}
+
+.web {
+	text-align: center;
+	width: 100%;
+	color: #858585;
+	font-size: 1rem;
+}
+
+.address>p {
+	margin: 10px;
+}
+
+.sns {
+	width: 50%;
+	height: 90px;
+	display: flex;
+	justify-content: center;
+}
+
+.sns>div {
+	margin-right: 10px;
+	margin-left: 20px;
+}
+
+.sns>div:hover {
+	cursor: pointer;
+}
+
+.facebook {
+	color: rgb(71, 71, 177);
+}
+
+.twitter {
+	color: rgb(52, 138, 219);
+}
+
+.instagram {
+	color: rgb(105, 30, 93);
+}
+
+.youtube {
+	color: #c4302b;
+	font-size: 3rem;
+	margin-left: 20px;
+}
+
+.fas {
+	font-size: 0.8rem;
+	color: rgba(247, 238, 223, 0.6);
+	display: inline-block;
+}
+
+.fab {
+	margin-top: 30px;
+}
+
+/*oneword @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.oneWordBody {
+	background-color: rgb(93, 100, 69);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	user-select: none;
+	flex-flow: column;
+}
+
+.oneWordWrap {
+	width: 768px;
+}
+
+.oneWordTitleWarp {
+	display: flex;
+	padding-top: 20px;
+}
+.earthImg {
+	width: 160px;
+	height: 160px;
+	overflow: hidden;
+	border-radius: 50%;
+	background-position: center;
+	background-size: 200px;
+}
+
+.oneWordTitleWarp>.oneWordTitle {
+	font-size: 25pt;
+	line-height: 160px;
+	padding-left: 10px;
+}
+
+#loginName {
+	padding-left: 10px;
+	font-size: 13pt;
+	font-weight: bold;
+}
+
+#oneWordForm {
+	position: relative;
+	border: 1px solid lightgray;
+	width: 768px;
+	height: 160px;
+}
+
+.oneWordContent {
+	width: 96.6%;
+	height: 90px;
+	resize: none;
+	border: none;
+	border-bottom: 1px solid lightgray;
+	padding: 13px;
+	font-size: 12pt;
+	background-color: rgb(93, 100, 69);
+}
+
+.oneWordContent::placeholder {
+	color: #dadada;
+}
+
+.oneWordContent::-webkit-input-placeholder {
+	color: #dadada
+}
+
+.oneWordContent:-ms-input-placeholder {
+	color: #dadada
+}
+
+#oneWordForm>p>input {
+	position: absolute;
+	right: 0;
+	bottom: -1px;
+	width: 110px;
+	height: 44px;
+	background-color: rgb(73, 71, 71);
+	color: white;
+	font-size: 11pt;
+}
+
+#oneWordForm>p>input:hover {
+	cursor: pointer;
+}
+
+sup {
+	padding: 10px;
+	line-height: 31px;
+	font-size: 13pt;
+}
+
+#oneWordList {
+	padding-top: 20px;
+}
+
+#oneWordList>ul {
+	display: flex;
+	padding-left: 5px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid lightgray;
+}
+
+#oneWordList>ul>li:nth-child(1) {
+	width: 80px;
+	font-size: 10pt;
+	font-weight: bold;
+	color: black;
+	padding-right: 13px;
+}
+
+#oneWordList>ul>li:nth-child(2) {
+	width: 530px;
+	font-size: 9pt;
+	color: black;
+	padding-right: 10px;
+}
+
+#oneWordList>ul>li:nth-child(3) {
+	width: 80px;
+	font-size: 7pt;
+	color: lightgray;
+	padding-right: 12px;
+}
+
+.onewordDeleteBtn {
+	all: unset;
+	font-size: 9pt;
+	font-weight: bold;
+	border-bottom: 1px solid red;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.paging-number {
+	text-align: center;
+	font-size: 11pt;
+}
+
+.paging-number>a {
+	padding-left: 10px;
+}
+/* myPage@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.mypageRoot {
+	background-color: rgba(247, 238, 223, 0.844);
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.myPageForm {
+	margin-top: 10%;
+	width: 768px;
+	background-color: white;
+	color: rgb(93, 100, 69);
+	display: block;
+	padding-top: 30px;
+	padding-bottom: 80px;
+}
+
+.mypageTitle {
+	padding-bottom: 20px;
+	font-size: 25pt;
+	text-align: center;
+}
+
+.idDiv, .myPageNameDiv, .myPageDate, .genderDiv, .addressDIv {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-left: 50px;
+	padding-bottom: 10px;
+	font-size: 13pt;
+	font-weight: bold;
+	border-bottom: 1px solid #dadada;
+}
+
+.idDiv>p {
+	padding: 0;
+	margin: 0;
+}
+
+.mypageInfo input {
+	padding: 10px;
+	padding-right: 17px;
+	border: 2px solid rgb(151, 156, 124);
+	outline: none;
+	margin: 5px 0;
+}
+
+.mypageInfo input:hover, .mypageInfo input:focus {
+	border: 2px solid rgb(93, 100, 69);
+}
+
+.passwordDiv {
+	padding-left: 50px;
+}
+
+.pwMsg {
+	height: 20px;
+	line-height: 20px;
+	font-size: 9pt;
+}
+
+.radioBtn {
+	padding-right: 30px;
+}
+
+.mypageBtns {
+	padding-left: 30px;
+}
+
+.modifyBtn, .cancelBtn, .deleteBtn {
+	width: 100px;
+	height: 40px;
+	background-color: rgb(93, 100, 69);
+	border: 3px solid rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	color: rgb(247, 238, 223);
+	margin-top: 5px;
+}
+
+.submitBtn {
+	width: 100px;
+	height: 42px;
+	background-color: rgb(93, 100, 69);
+	border: 3px solid rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	color: rgb(247, 238, 223);
+	margin-top: 5px;
+}
+
+.modifyBtn:hover, .submitBtn:hover, .cancelBtn:hover, .deleteBtn:hover {
+	border: 3px solid rgb(93, 100, 69);
+	background-color: rgb(247, 238, 223);
+	color: rgb(93, 100, 69);
+	transition-duration: 0.3s;
+	cursor: pointer;
+}
+
+/* overlay @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@*/
+.aisdeOverlay, .overlay {
+	width: 100%;
+	height: 120%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgb(0, 0, 0, 0.5);
+}
+
+.hidden {
+	display: none;
+}
+
+.overFlow {
+	overflow: hidden;
+}
+
+/* 반응형  !!!! 맨아래 필수 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+@media ( max-width : 1180px) {
+	header, main, footer {
+		width: 768px;
+	}
+	main {
+		flex-flow: column;
+		margin-top: 5px;
+	}
+	.part3 {
+		width: 100%;
+		height: 231px;
+		line-height: 231px;
+	}
+	.part3:hover {
+		width: 100%;
+		font-size: 60px;
+		transition-duration: 1s;
+	}
+	.joinForm {
+		width: 768px;
+	}
+}
+
+@media ( max-width : 768px) {
+	header, main, footer {
+		width: 480px;
+	}
+	.part3 {
+		height: 205px;
+		line-height: 205px;
+	}
+	footer {
+		height: 180px;
+	}
+	.address, .sns {
+		width: 100%;
+	}
+	.footerMenu {
+		flex-flow: column;
+	}
+	.joinForm {
+		width: 480px;
+	}
+	/* 원워드      --------------------------*/
+	.oneWordWrap {
+        width: 480px;
+    }
+    #oneWordForm {
+		width: 480px;
+	}
+	.oneWordContent {
+		width: 94.3%;
+	}
+}

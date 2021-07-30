@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC 
+		"-//mybatis.org//DTD Mapper 3.0//EN" 
+		"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.avengors.model.BoardDAO">
+
+	<!-- <insert id="insertBoard" parameterType="board"> INSERT INTO BOARD (MIDX, 
+		TITLE, CONTENT, CATEGORY,uploadfile) VALUES (#{midx}, #{title}, #{content}, 
+		#{category}, #{uploadfile}) </insert> -->
+
+	<!-- 작성 -->
+	<insert id="insertBoard" parameterType="board">
+		INSERT INTO BOARD(title,
+		content) values(#{title},#{content})
+	</insert>
+
+	<!-- 목록 -->
+	<select id="boardList" resultType="board">
+		SELECT * FROM BOARD where deleted = 'n'
+	</select>
+	
+	<!-- 조회수-->
+	<update id="viewCountUp" parameterType="board">
+		UPDATE BOARD SET
+		viewCount = viewCount +1
+		WHERE IDX = #{idx}
+	</update>
+	
+	<!-- 삭제 -->
+	<update id="deleteBoard" parameterType="board">
+		UPDATE BOARD SET
+		deleted = 'y'
+		WHERE IDX = #{idx}
+	</update>
+	
+	<!-- 상세보기 -->
+	<select id="selectOne" resultType="board">
+		SELECT * FROM BOARD WHERE IDX = #{idx}
+	</select>
+	
+	<!-- 수정 -->
+	<update id="updateBoard" parameterType="board">
+		UPDATE BOARD SET
+		TITLE = #{title},
+		CONTENT = #{content}
+		WHERE IDX = #{idx}
+	</update>
+
+</mapper>
