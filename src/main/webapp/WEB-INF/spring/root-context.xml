@@ -27,9 +27,9 @@
 			destroy-method="close">
 		<!-- 스프링 빈으로 객체를 선언하고, property 태그로 setter를 통해 값을 지정할 수 있다 -->
 		<property name="driverClass" value="oracle.jdbc.driver.OracleDriver" />		
-		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:xe" />		
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@221.164.9.200:41521:xe" />
 		<property name="user" value="c##itbank" />		
-		<property name="password" value="it" />		
+		<property name="password" value="green" />
 		<property name="maxPoolSize" value="30" />
 		<property name="maxIdleTime" value="600" />		
 		<property name="idleConnectionTestPeriod" value="300" />		
