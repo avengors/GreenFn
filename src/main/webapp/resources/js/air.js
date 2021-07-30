@@ -6,31 +6,20 @@ async function getDust(informCode) {
 }
 
 function displayItems(items) { // JSON을 HTML에 표시
+
+    const tbody = document.getElementById("tbody");
     for (const item of items) {
-        for (const [city, grade] of Object.entries(item.informGrade)) {
-            const tr = document.getElementById(city);
-
-            const th = tr.querySelector("th");
-            if (!th) {
-                const newTh = document.createElement("th");
-                newTh.innerText = city;
-                tr.append(newTh)
-            }
-
+        const tr = document.createElement("tr");
+        tbody.append(tr);
+        item.imageUrls.forEach(url => {
             const td = document.createElement("td");
-            td.innerText = grade;
-
+            const img = document.createElement("img");
+            img.src = url;
+            td.append(img);
             tr.append(td);
-        }
+        });
     }
-}
 
-function refreshDustInfo(ev) {
-    document.querySelectorAll("#dustTBody td").forEach(elem => elem.remove());
-    getDust(ev.target.value).then(displayItems);
 }
-
-document.querySelectorAll(".dustButton")
-    .forEach(elem => elem.addEventListener("click", refreshDustInfo));
 
 getDust("pm10").then(displayItems);
