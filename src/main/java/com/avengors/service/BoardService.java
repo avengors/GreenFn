@@ -48,23 +48,18 @@ public class BoardService {
 	}
 	@Autowired private BoardDAO dao;
 	
-	public BoardDTO write(int midx, BoardDTO dto, MultipartFile file, String path) throws IOException {
+	public BoardDTO write(int midx, BoardDTO dto, MultipartFile file) throws IOException {
         if (!file.isEmpty()) {
-            saveFile(file, path);
+            saveFile(file);
             dto.setUploadfile(file.getOriginalFilename());
         }
-
         dto.setMidx(midx);
-
         dao.save(dto);
         return dto;
     }
 
-    private void saveFile(MultipartFile file, String path) throws IOException {
-        File dir = new File(path);
-        if (!dir.exists()) dir.mkdirs();
-
-        String fullPath = path + "/" + file.getOriginalFilename();
+    private void saveFile(MultipartFile file) throws IOException {
+        String fullPath = "/var/www/html/" + file.getOriginalFilename();
         file.transferTo(new File(fullPath));
     }
  

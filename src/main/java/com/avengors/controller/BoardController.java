@@ -126,24 +126,17 @@ public class BoardController {
 	}
 	//게시물 작성
 	@PostMapping("/write")
-	public String write(BoardDTO dto) {
-		bs.insertBoard(dto);
-		return "redirect:/board/news";
+	public String write(
+				@RequestParam(name = "uploadFile") MultipartFile file,
+				@ModelAttribute BoardDTO board,
+				@SessionAttribute("login") MemberDTO member
+				) throws IOException {
+		BoardDTO uploadPost = bs.write(member.getIdx(), board, file);
+
+		log.info("uploadPost = {}", uploadPost);
+
+		return "redirect:/";
 	}
-	
-//	@PostMapping("/write")
-//	public String write(
-//				@RequestParam(name = "uploadFile") MultipartFile file,
-//				@ModelAttribute BoardDTO board,
-//				@SessionAttribute MemberDTO member,
-//				HttpServletRequest request
-//				) throws IOException {
-//		BoardDTO uploadPost = bs.write(member.getIdx(), board, file, request.getSession().getServletContext().getRealPath("upload"));
-//	
-//		log.info("uploadPost = {}", uploadPost);
-//	
-//		return "redirect:/";
-//	}
 // 
 //
 //	// return type이 void인 경우 uri를 jsp로 forword하는 정보 사용한다.

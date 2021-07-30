@@ -5,9 +5,12 @@
 
 <mapper namespace="com.avengors.model.BoardDAO">
 
-	<!-- <insert id="insertBoard" parameterType="board"> INSERT INTO BOARD (MIDX, 
-		TITLE, CONTENT, CATEGORY,uploadfile) VALUES (#{midx}, #{title}, #{content}, 
-		#{category}, #{uploadfile}) </insert> -->
+	<insert id="save" parameterType="board">
+		INSERT INTO BOARD
+		    (MIDX, TITLE, CONTENT, CATEGORY, uploadfile)
+		VALUES
+		    (#{midx}, #{title}, #{content}, #{category}, #{uploadfile})
+	</insert>
 
 	<!-- 작성 -->
 	<insert id="insertBoard" parameterType="board">
