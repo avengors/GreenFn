@@ -44,9 +44,8 @@ public class BoardDAOimpl implements BoardDAO{
 	}
 	//수정
 	@Override
-	public void updateBoard(BoardDTO boardto) {
-		sql.update("updateBoard",boardto);
-		
+	public int updateBoard(BoardDTO boardto) {
+		return sql.update("updateBoard", boardto);
 	}
 	
 	
